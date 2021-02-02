@@ -1,4 +1,6 @@
-//Step 1 Phase 0 Open your data
+//Step 1 Phase 0 Open your data, this will change for every data set used
+//if using data from the same lifext, just change the series_2 to whichever series_ you are interested in.
+// find all instances of series_2 and replace with the new series number, 
 run("Bio-Formats Importer", "open=/home/u22/cgdeer/CC_PFC3_layer3(1).lifext autoscale color_mode=Default rois_import=[ROI manager] split_channels view=Hyperstack stack_order=XYCZT series_2");
 
 //Step 1 Phase 1 select the channel with the cell of interest
@@ -24,10 +26,12 @@ run("Analyze Regions 3D", "volume surface_area mean_breadth sphericity euler_num
 rename("C0_PFC3_series_2_Largest_Isolate");
 
 //Step 1 Phase 6 save out volume in ome.tif
+//replace series number here
 run("Bio-Formats Exporter", "save=[C0_PFC3_series_2_Largest_Isolate.ome.tif] export compression=uncompressed");
 run("Bio-Formats Exporter", "save=/home/u22/cgdeer/CO_PFC3_series_2_Largest_Isolate");
 
 //Step 2 Phase 0 Isolate signal of a channel using the isolated volume of the cell of interest
+//replace series number
 imageCalculator("Subtract create stack", "CC_PFC3_layer3(1).lifext - C=1","C0_PFC3_series_2_Largest_Isolate");
 
 //Step 2 Phase 1 Find the bright points in the remaining signal, using face and vertex conectivity, note I have not changed dynamic settings so this is a place 
@@ -44,5 +48,6 @@ run("Find Connected Regions", "allow_diagonal display_one_image display_results 
 run("Analyze Regions 3D", "volume surface_area mean_breadth sphericity euler_number bounding_box centroid equivalent_ellipsoid ellipsoid_elongations max._inscribed surface_area_method=[Crofton (13 dirs.)] euler_connectivity=C26");
 
 // Step 2 Phase 5 saves out both the output of Step 2 Phase 4 and its image result.
+//replace series number
 saveAs("Results", "/home/u22/cgdeer/Process2_CC_PFC3_series2_Layers3(1).csv");
 run("Bio-Formats Exporter", "save=/home/u22/cgdeer/Process2_PFC3_series_2_CC_PFC1_Layer3(1)_result.ome.tif export compression=Uncompressed");
