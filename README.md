@@ -20,7 +20,7 @@ Repo for code used on UA HPC to segment 3D confocal data in FIJI
 5. Then click Apply Changes, and restart FIJI.
 
 # A note on the data structure used in analysis
-## The Riegel team's data took the form of .lifext 
+## The Reigel team's data took the form of .lifext 
 1.  .lifext can contain multiple image stacks within its directory
 2.  For the purpose of this analysis, only the high resolution images (1532 x 1532) were used.  Each iamge stack focuses on one cell of interest, although fragments of other cells may be present in the image.
 
@@ -52,14 +52,6 @@ Repo for code used on UA HPC to segment 3D confocal data in FIJI
 5. Replace the line to open your data with what the recorder reads out. Then continue on to replace the data identifier and if applicapble the series number throughout the script.
 
 ### Process2_Macro_v0.1_alt.1.ijm comments give instructions on how to target a different image within a .lifext database.  
-
-
-## Inputs acceptable for either script:
-### Any format loadable by the bioformats importer will work.  See https://imagej.net/Bio-Formats for details.
-- Note well that the instructions are for 
-
-##Brief description of each script, how they run (requirements, installation if anything special from the above)
-##What the script does; input files; what happens to input files; what gets output and why
 
 # Running the Code:
 1. to run either script, retarget the path within the script to your data, and assign the correct data set identifier and series number through out the script then save it.
