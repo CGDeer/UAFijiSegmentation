@@ -1,5 +1,9 @@
-//Step 1 Phase 0 Open your data, this will change for every data set used
-//if using data from a different lifext, chance the path to the new file.
+//To run the script, open Fiji and click on Plugins > Macros > Run...
+//Then select your script from the file directory.
+
+//Step 1 Phase 0 Open your data, this will change for every data set used.  Change the path root to where you have saved your data:
+//ie: open=/home/u22/cgdeer/CC_PFC1_Layer3(1).lifext  changes to open=/home/u**/yourUserName/[...] where ** is the number for your home directory and 
+//if using data from a different lifext, change the name CC_PFC1_layer3(1).lifext to the new filename.
 //then find all instances of PFC1_series_2 and replace with the new image identifier and series number where indicated in the comments
 //N.B. for all steps we assume that C=0 is the channel containing the neural cell of interest, and C=1 is channel containing puncta signal.
 run("Bio-Formats Importer", "open=/home/u22/cgdeer/CC_PFC1_layer3(1).lifext autoscale color_mode=Default rois_import=[ROI manager] split_channels view=Hyperstack stack_order=XYCZT series_2");
