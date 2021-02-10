@@ -41,7 +41,7 @@ Repo for code used on UA HPC to segment 3D confocal data in FIJI for the Reigel 
 2. use grey attribute 3d filtering on the mask to find puncta that are larger than 50
 3. find connected regions within the remain signal
 4. analyze the regions for puncta statistics
-5 save out the image and the statistics file as .ome.tif and .csv respectively
+5. save out the image and the statistics file as .ome.tif and .csv respectively
 
 ## A Brief Description of the Script files and their differences.  
 ### There are currently two script files included within this repo.  They follow the same general structure but have comments that acheive different goals.  
