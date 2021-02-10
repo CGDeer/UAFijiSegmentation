@@ -1,5 +1,5 @@
 # UAFijiSegmentation
-Repo for code used on UA HPC to segment 3D confocal data in FIJI 
+Repo for code used on UA HPC to segment 3D confocal data in FIJI for the Reigel Lab. 
 
 # Overview of Project Goal
 ## The primary project goal of the code herein is to provide a method to segment and analyze multi channel lifext datasets from the Reigel team.  
@@ -43,19 +43,26 @@ Repo for code used on UA HPC to segment 3D confocal data in FIJI
 4. analyze the regions for puncta statistics
 5 save out the image and the statistics file as .ome.tif and .csv respectively
 
-## There are currently two script files included within this repo.  They follow the same general structure but have comments that acheive different goals.  
-### Process2_Macro_v0.1.ijm 's comments give instructions that would target a different .lifext dataset.  To target a completely different file format: 
+## A Brief Description of the Script files and their differences.  
+### There are currently two script files included within this repo.  They follow the same general structure but have comments that acheive different goals.  
+#### Process2_Macro_v0.1.ijm 's comments give instructions that would target a different .lifext dataset.  
+
+### Process2_Macro_v0.1_alt.1.ijm comments give instructions on how to target a different image within a .lifext database.  
+#### This script does all the same things as Process2_Macro_v0.1.ijm but it is innately targeted at a different .lifext database and has instructions for targeting different series within the same .lifext.  It was called _alt.1 because it is the exact same script for all intents and purposes, acting as a solid example of what needs to happen for retargeting the script to a different file.
+
+## Targeting non-.lifext file types
+### To target a completely different file format: 
 1. If you are using a file type other than .lifext you will need to get the I/O formatting from the macro recorder.
 2. To do this, open FIJI, click on Plugins > Macros > Record
 3. Then click on Plugins > Bio-Formats > Bio-Formats Importer
 4. Select the file you wish to open.
 5. Replace the line to open your data with what the recorder reads out. Then continue on to replace the data identifier and if applicapble the series number throughout the script.
 
-### Process2_Macro_v0.1_alt.1.ijm comments give instructions on how to target a different image within a .lifext database.  
+## Running the scripts:
+1. to run either script, retarget the path within the script to your data, and assign the correct filepath, data set, data set identifier, and series number through out the script then save it.  
+2. Move your script to the HPC. Since you had a chance to rename it to whatever you wanted in the previous step, I will call your version of the script to yourscript.ijm
+3. Request time as described in the note for plugins required, open your session then navigate to your Fiji folder on the hpc.
+4. run Fiji, then click Plugins > Macros > Run...
+- alternatively you could also use Plugins > Macros > Edit..., which will allow you to look at the code before running it.  This is useful if you cloned the directory from github to your hpc account and skipped step 1 of Running the code as you can edit the script's filepath, data set, data set identifiers, and series numbers directly in Fiji if you so wish.  This mode is also recommended if you need slightly different parameters for your analysis. 
+5. select yourscript.ijm and then wait whilst the analysis executes.
 
-# Running the Code:
-1. to run either script, retarget the path within the script to your data, and assign the correct data set identifier and series number through out the script then save it.
-2. Request time as described in the note for plugins required, open your session then navigate to your Fiji folder on the hpc.
-3. run Fiji, then click Plugins > Macros > Run...
-- alternatively you could also use Plugins > Macros > Edit..., which will allow you to look at the code before running it.
-4. select yourscript.ijm and then wait whilst the analysis executes.
