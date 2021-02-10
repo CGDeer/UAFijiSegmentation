@@ -11,9 +11,9 @@ Repo for code used on UA HPC to segment 3D confocal data in FIJI for the Reigel 
 - Note well that you do not need to use the HPC for the analysis and can use this for smaller image stacks.  However unless your computer has fairly good specs we reccomend against this as the all to common out of memory error may plague you if your data set is just a bit too big.
 
 # Plugin required:
-## With Plugin: MorpholibJ that can be found here https://imagej.net/MorphoLibJ 
+## Plugin: MorpholibJ that can be found here https://imagej.net/MorphoLibJ 
 - IF this is the first time you are using the UA HPC Open On Demand Services, please visit https://public.confluence.arizona.edu/display/UAHPC/Job+Submission, to familiarize yourself with how to request nodes and time on the HPC.  
-1. Request 2 hours on 4 nodes minimum for analysis of a 1532 x 1532 x 171 (C3 x 57) image stack.  The analysis runs for about 1.5 hours, but the extra time gives you a chance to save any intermediates that aren't already saved by the scripts.
+1. Request 2 hours on 4 cores minimum for analysis of a 1532 x 1532 x 171 (C3 x 57) image stack.  The analysis runs for about 1.5 hours, but the extra time gives you a chance to save any intermediates that aren't already saved by the scripts.
 2. To install MorpholibJ, open your FIJI application, then click on Help>Update...
 3. You may need the previous step twice, follow the onscreen instructions, until the ImageJ Updater window is opened.
 4. Click on Manage Update Sites, then click on the check box of IJPB-plugins then close the Manage update sites window.
