@@ -3,8 +3,7 @@
 
 //Step 1 Phase 0 The step where we open data. 
 //This will change for every data set used.  Change the path root to where you have saved your data:
-//ie: open=/home/u22/cgdeer/CC_PFC1_Layer3(1).lifext  changes to open=/home/u**/yourUserName/[...] where ** is the number for your home directory and yourUserName is replaced
-//with your NetID.
+//ie: open=/home/u22/cgdeer/CC_PFC1_Layer3(1).lifext  changes to open=/** where ** is the path to your data wherever you placed it (sometimes xdisk, sometimes home)
 //if using data from the same lifext, just change the series_2 to whichever series_ you are interested in.
 // find all instances of series_2 and replace with the new series number, 
 run("Bio-Formats Importer", "open=/home/u22/cgdeer/CC_PFC3_layer3(1).lifext autoscale color_mode=Default rois_import=[ROI manager] split_channels view=Hyperstack stack_order=XYCZT series_2");
