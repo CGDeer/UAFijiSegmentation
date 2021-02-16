@@ -4,6 +4,10 @@ Repo for code used on UA HPC to segment 3D confocal data in FIJI for the Reigel 
 # Overview of Project Goal
 ## The primary project goal of the code herein is to provide a method to segment and analyze multi channel lifext datasets from the Reigel team.  
 
+# Required interface with the HPC:
+## You will need to be familiar with using the open-on-demand interface for the University of Arizona HPC.  You can connect from you favorite browser (I use firefox): https://ood.hpc.arizona.edu/pun/sys/dashboard, which will place you at a login portal for university services.  Emter your netID and password as usual:
+
+
 # Programs required:
 ## Fiji is just ImageJ that can be found here https://imagej.net/Fiji.  Fiji is  distribution of ImageJ that bundles common scientific image analysis plugins into the base ImageJ platform.
 1. To work on the HPC you will want the linux 64 bit download.  
