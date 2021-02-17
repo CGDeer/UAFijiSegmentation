@@ -5,7 +5,15 @@ Repo for code used on UA HPC to segment 3D confocal data in FIJI for the Reigel 
 ## The primary project goal of the code herein is to provide a method to segment and analyze multi channel lifext datasets from the Reigel team.  
 
 # Required interface with the HPC:
-## You will need to be familiar with using the open-on-demand interface for the University of Arizona HPC.  You can connect from you favorite browser (I use firefox): https://ood.hpc.arizona.edu/pun/sys/dashboard, which will place you at a login portal for university services.  Emter your netID and password as usual:
+## You will need to be familiar with using the open-on-demand interface for the University of Arizona HPC.  You can connect from you favorite browser (I use firefox): https://ood.hpc.arizona.edu/pun/sys/dashboard, which will place you at a login portal for university services.  Enter your netID and password as usual:
+//!(https://github.com/CGDeer/UAFijiSegmentation/blob/Imgs/master/ood-dashboard.jpg?raw=true)
+### For our purposes there are two functions to be familiar with on the OOD dashboard.   
+1. You can add small files using the file transfer tab at the top right, this is fairly simple just click the tab and drag and drop your files to transfer them.
+2. You can request time and and cores using the "Interactive Apps" drop down.  We will be asking for cores and time on Ocelote so click on Interactive Apps > Ocelote Desktop
+- This will bring you to a form for requesting time, cores, gpus and the like.  Essentially it is the form version of a pbs script.  
+-   For setup you will want an hour of time on one core to get the plugin setup done and to check for Fiji updates for your Fiji application. 
+-   For actually running the scripts and analyzing data, ask for a minimum of 2.5 hours and 4 cores to run the analysis for a stack of images.  These values may need to change due to the size of your data set.
+3. After submtting your request you may need to wait until the system is able to serve your request. Wait until the screen tells you the system is ready and then connect to the remote desktop
 
 
 # Programs required:
