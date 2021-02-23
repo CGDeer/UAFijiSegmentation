@@ -32,6 +32,7 @@ run("Keep Largest Label");
 
 //Step 1 Phase 5 Retreival of region data.  There should only be one line of infomation as the previous step removes all other volumes.
 run("Analyze Regions 3D", "volume surface_area mean_breadth sphericity euler_number bounding_box centroid equivalent_ellipsoid ellipsoid_elongations max._inscribed surface_area_method=[Crofton (13 dirs.)] euler_connectivity=C26");
+saveAs("Results", "/home/u22/cgdeer/CC_PFC1_layer(3)1-Series_2_CellStats.csv");
 rename("C0_PFC1_series_2_Largest_Isolate");
 
 //Step 1 Phase 6 save out volume in ome.tif
