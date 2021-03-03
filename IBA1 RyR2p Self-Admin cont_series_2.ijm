@@ -1,4 +1,4 @@
-//Step 0 Running and Initialization
+//Step 0 Running and Initialization 
 //To run this script, open on demand for ocelote, with 2 hours and 4 cores.  
 //Open FIJI on your interactive HPC session, Plugins>Macros>edit
 //select the script from your directory, and then hit run.
