@@ -1,3 +1,6 @@
+As a note: A recent update to Fiji has resulted in the script becoming non-functional with exceptions arising aroung the MorphoLibJ's connect2d and connect3d internal calls.
+
+
 # UAFijiSegmentation
 Repo for code used on UA HPC to segment 3D confocal data in FIJI for the Reigel Lab. 
 
