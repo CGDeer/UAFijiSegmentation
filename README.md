@@ -1,5 +1,5 @@
 As a note: A recent update to Fiji has resulted in the script becoming non-functional with exceptions arising aroung the MorphoLibJ's connect2d and connect3d internal calls.
-
+-- 5/11/2021 there was a FIJI update that caused multiple errors and required reinstallation of pulgin MorphoLibJ despite it being marked as an update site.  While recovery of MorphoLibJ functions was possible, the script now spews exception errors when using find connected regions, specifically the connect2d and connect3d compononents. Version of FIJI is 2.1.0/1.5.3c with Java 1.8.0_66 (64bit)
 
 # UAFijiSegmentation
 Repo for code used on UA HPC to segment 3D confocal data in FIJI for the Reigel Lab. 
